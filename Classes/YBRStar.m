@@ -51,6 +51,7 @@
     UIView *view=[[UIView alloc]initWithFrame:self.bounds];
     view.clipsToBounds=YES;
     view.backgroundColor=[UIColor clearColor];
+    NSBundle *bundle = [NSBundle bundleForClass:YBRStar.class];
     for (int i=0; i<self.numberOfStars; i++) {
         UIImageView *imgView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:imageName inBundle:bundle compatibleWithTraitCollection:nil]];
         imgView.frame=CGRectMake(i*self.bounds.size.width/self.numberOfStars, 0, self.bounds.size.width / self.numberOfStars, self.bounds.size.height);
