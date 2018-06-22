@@ -52,7 +52,7 @@
     view.clipsToBounds=YES;
     view.backgroundColor=[UIColor clearColor];
     for (int i=0; i<self.numberOfStars; i++) {
-        UIImageView *imgView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:imageName]];
+        UIImageView *imgView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:imageName inBundle:bundle compatibleWithTraitCollection:nil]];
         imgView.frame=CGRectMake(i*self.bounds.size.width/self.numberOfStars, 0, self.bounds.size.width / self.numberOfStars, self.bounds.size.height);
         imgView.contentMode=UIViewContentModeScaleAspectFit;
         [view addSubview:imgView];
